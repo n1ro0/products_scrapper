@@ -13,6 +13,11 @@ class LordandtaylorSpider(scrapy.Spider):
     #allowed_domains = ['http://www.lordandtaylor.com']
     start_urls = ['http://www.lordandtaylor.com/Women/shop/_/N-4zteyp/Ne-6ja3o7']
 
+    def __init__(self, url='http://www.lordandtaylor.com/Women/shop/_/N-4zteyp/Ne-6ja3o7', *args, **kwargs):
+        super(LordandtaylorSpider, self).__init__(*args, **kwargs)
+        self.start_urls = [url]
+
+
     def parse(self, response):
         categories = response.xpath('//ul[contains(@class, "perpetual") and contains(@class, "left-nav-group-container")]/li/a')
         for category in categories:
