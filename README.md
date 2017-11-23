@@ -1,7 +1,7 @@
-# products_scrapy
+# products_scrapper
 -From default category url It scrapped to my database 55138 products and 303255 product prices.
 
--To make this project work you have to start celery and lordandtaylor spider
+-To make this project work you have to start celery worker and lordandtaylor spider
  lordandtaylor spider crawls products and all possible product prices from chosen category.
  Celery saves it to postgres database. You have to run servers: 
  Redis, Postgres and create user and database in postgresql.
@@ -17,7 +17,7 @@
         CREATE USER scrapy_user with password 'qwerty12';
         CREATE DATABASE scrapy_db owner scrapy_user;
 
-    4. to run scrapy worker:
+    4. to run celery worker:
         enter folder: products_scrapper
         run command: celery -A products_scraper worker --loglevel=info
 
