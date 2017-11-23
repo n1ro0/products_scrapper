@@ -5,7 +5,7 @@
  lordandtaylor spider crawls products and all possible product prices from chosen category.
  Celery saves it to postgres database. You have to run servers: 
  Redis, Postgres and create user and database in postgresql.
- 
+
     1. When you install redis server it automatically starts:
         sudo apt-get install redis-server
 
@@ -18,11 +18,11 @@
         CREATE DATABASE scrapy_db owner scrapy_user;
 
     4. to run scrapy worker:
-        enter folder: products_scraper/products_scraper
+        enter folder: products_scrapper
         run command: celery -A products_scraper worker --loglevel=info
 
     5. to run spider:
-        enter folder: products_scraper/products_scraper
+        enter folder: products_scrapper/products_scraper
         run command: scrapy crawl lordandtaylor
 
 
