@@ -4,8 +4,9 @@
 -To make this project work you have to start celery and lordandtaylor spider
  lordandtaylor spider crawls products and all possible product prices from chosen category.
  Celery saves it to postgres database. You have to run servers: 
- Redis, Postgres and create user and database in postgresql
-	1. When you install redis server it automatically starts:
+ Redis, Postgres and create user and database in postgresql.
+ 
+    1. When you install redis server it automatically starts:
         sudo apt-get install redis-server
 
     2. When you install postgresql its server automatically starts:
